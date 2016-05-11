@@ -14,4 +14,4 @@ puts "Enter the second number:"
 # figure out how to do the math on the 2 numbers 
 # ouput the result to the user
 
-# Do all the bonuses
+# Do all the bonus problems 
