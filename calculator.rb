@@ -100,8 +100,8 @@ end
 
 def repeat
 	puts "Perform another calculation? Y/N"
-	repeat = gets.strip.to_s.downcase
-	if repeat = "y"
+	repeat = gets.strip.downcase.to_s
+	if repeat == "y"
 		first_number
 	else
 		puts "Have a nice day!"
