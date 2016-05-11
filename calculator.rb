@@ -29,19 +29,22 @@
 # 		menu
 # 	end
 # end
-@num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-
-def first_number
-	puts "Enter your first number:"
-	user_input1 = gets.strip
+def first_number(answer = 'b')
+	if answer == 'b'
+		puts "Enter your first number:"
+		user_input1 = gets.strip
+	else
+		user_input1 = answer
+	end
 	validate_one(user_input1)
 end
 
 def validate_one(num1)
-	if @num.include?(num1)
+	same = num1.to_f.to_s
+	if same == num1
 		modifier(num1.to_f)
 	else
-		puts "User input error. Please use a number."
+		puts "User input error. Please use this syntax: 3.0 !!!"
 		first_number
 	end
 end
@@ -69,7 +72,8 @@ def second_number(num1, oper)
 end
 
 def validate_two(num1, oper, num2)
-	if @num.include?(num2)
+	same = num2.to_f.to_s
+	if same == num2
 		calculation(num1, oper, num2.to_f) 
 	else
 		puts "User input error. Please use a number."
@@ -95,16 +99,19 @@ end
 
 def result(array)
 	puts "#{array[0]} #{array[1]} #{array[2]} = #{array[3]}"
-	repeat
+	repeat(array[3].to_f.to_s)
 end
 
-def repeat
-	puts "Perform another calculation? Y/N"
+def repeat(answer)
+	puts "Q to quit, N for new calculation, or Enter to continue with existing calculation"
 	repeat = gets.strip.downcase.to_s
-	if repeat == "y"
+	if repeat == "n"
 		first_number
-	else
+	elsif repeat == "q"
 		puts "Have a nice day!"
+	else
+		puts answer
+		first_number(answer)
 	end
 end
 
