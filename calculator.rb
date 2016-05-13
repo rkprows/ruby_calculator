@@ -1,34 +1,4 @@
-# create / edit a file
-# stage the file - git add
-# make a commit
-# push to a github repo
-# def menu 
-# 	puts "welcome to the Ruby Calculator"
-# 	puts "Enter your first number:"
-# 	user_input1 = gets.to_f
-# 	puts "Enter your operator"
-# 	user_input2 = gets.chomp
-# 	puts "Enter your second number:"
-# 	user_input3 = gets.to_f
-# 	puts "Calculating..."
-# 	puts "The result of #{user_input1} #{user_input2} #{user_input3} is..."
-# 	calculation(user_input1, user_input2, user_input3) 
-# end
 
-# def calculation(num1,operator,num2)
-# 	if operator == '+'
-# 		puts num1 + num2
-# 	elsif operator == '-'
-# 		puts num1 - num2
-# 	elsif operator == '*'
-# 		puts num1 * num2
-# 	elsif operator == '/'
-# 		puts num1 / num2
-# 	else 
-# 		puts "User input error. I only support operators +, -, *, /. Please try again"
-# 		menu
-# 	end
-# end
 def first_number(answer = 'b')
 	if answer == 'b'
 		puts "Enter your first number:"
